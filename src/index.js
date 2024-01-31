@@ -8,7 +8,7 @@ import { AlbumProvider } from './providers/AlbumProvider';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+
     <ToastProvider autoDismiss autoDismissTimeout={5000} placement='top-left'>
     <AlbumProvider>
     <App />
@@ -16,7 +16,6 @@ root.render(
     
     </ToastProvider>
     
-  </React.StrictMode>
 );
 
 

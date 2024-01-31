@@ -6,8 +6,10 @@ const initialState={
     albums:[],
     loading:true,
     error:false,
-    editalbum:()=>{},
-    searchedAlbum:[]
+    addAlbum:()=>{},
+    editAlbum:()=>{},
+    deleteAlbum:()=>{}
+    
 }
 
 
