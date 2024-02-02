@@ -2,8 +2,8 @@ import '../styles/App.css';
 import {Navbar,Loader} from './';
 import { useAlbums } from '../hooks';
 import { Home,AddAlbum,EditAlbum } from '../pages';
-import {createBrowserRouter, RouterProvider,Outlet} from 'react-router-dom'
-
+import {createBrowserRouter, RouterProvider} from 'react-router-dom'
+import {Helmet} from "react-helmet";
 
 function App() {
   const album = useAlbums();
@@ -11,6 +11,7 @@ function App() {
   if(album.loading){
     return <Loader/>;
   }
+
 
   const router = createBrowserRouter([
     {
@@ -33,11 +34,14 @@ function App() {
     }
   ]);
   return (
+    <>
+    <Helmet>
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()"></meta>
+    </Helmet>
     <div className="App">
-     {/* <Navbar/>
-     <Home/> */}
      <RouterProvider router={router}/>
     </div>
+    </>
   );
 }
 
