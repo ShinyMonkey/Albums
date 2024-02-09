@@ -23,7 +23,7 @@ const clear=()=>{
 const updateAlbum=async (e)=>{
   e.preventDefault();
     if(!userId || !title){
-       addtost('Fill all the fields',{
+       return addtost('Fill all the fields',{
             appearance:'error',
         })
     }

@@ -39,9 +39,9 @@ const clear=()=>{
 const edit=async (e)=>{
   e.preventDefault();
     if(!userId || !title){
-       addtost('Fill all the fields',{
-            appearance:'error',
-        })
+      return addtost('Fill all the fields',{
+        appearance:'error',
+    })
     }
     
 

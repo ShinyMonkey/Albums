@@ -11,7 +11,6 @@ export const useAlbumProvider=()=>{
 
     const [albums,setAlbums] = useState([]);
     const [loading,setLoading] = useState(true);
-    const [error,setError]=useState(false);
     const {addToast}= useToasts();
 
 
@@ -26,7 +25,6 @@ export const useAlbumProvider=()=>{
         } catch (error) {
             console.log(error);
             setLoading(false);
-            setError('Something went wrong');
         }
     };
 
@@ -34,7 +32,6 @@ export const useAlbumProvider=()=>{
     useEffect(()=>{
         setLoading(true);
         setAlbums([]);
-        setError(false);
         featchalbum();
     },[]);
 

@@ -36,7 +36,7 @@ function App() {
   return (
     <>
     <Helmet>
-    <meta http-equiv="Permissions-Policy" content="interest-cohort=()"></meta>
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()"/>
     </Helmet>
     <div className="App">
      <RouterProvider router={router}/>
