@@ -3,7 +3,6 @@ import {Navbar,Loader} from './';
 import { useAlbums } from '../hooks';
 import { Home,AddAlbum,EditAlbum } from '../pages';
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
-import {Helmet} from "react-helmet";
 
 function App() {
   const album = useAlbums();
@@ -35,9 +34,6 @@ function App() {
   ]);
   return (
     <>
-    <Helmet>
-    <meta http-equiv="Permissions-Policy" content="interest-cohort=()"/>
-    </Helmet>
     <div className="App">
      <RouterProvider router={router}/>
     </div>
